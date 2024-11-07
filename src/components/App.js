@@ -12,10 +12,10 @@ function App() {
     if (currentQuestionId < questions.length) {
       setCurrentQuestion((currentQuestionId) => currentQuestionId + 1);
     } else {
-      setCurrentQuestion(null);
+      setCurrentQuestion(null);  // End the game
     }
     if (correct) {
-      setScore((score) => score + 1);
+      setScore((score) => score + 1);  // Increment score if correct answer
     }
   }
 
@@ -39,3 +39,4 @@ function App() {
 }
 
 export default App;
+

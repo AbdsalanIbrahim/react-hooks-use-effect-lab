@@ -8,18 +8,18 @@ function Question({ question, onAnswered }) {
       setTimeRemaining((prevTime) => {
         if (prevTime <= 1) {
           onAnswered(false);  
-          return 10;          
+          return 10;  
         }
         return prevTime - 1;  
       });
     }, 1000);
 
-    return () => clearTimeout(timer);
+    return () => clearTimeout(timer);  
   }, [timeRemaining, onAnswered]);
 
   function handleAnswer(isCorrect) {
     setTimeRemaining(10);  
-    onAnswered(isCorrect); 
+    onAnswered(isCorrect);  
   }
 
   const { id, prompt, answers, correctIndex } = question;
@@ -42,4 +42,5 @@ function Question({ question, onAnswered }) {
 }
 
 export default Question;
+
 
